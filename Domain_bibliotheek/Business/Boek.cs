@@ -9,8 +9,8 @@ namespace Domain_bibliotheek.Business
     public class Boek
     {
         //declaratie van de variabelen
-        public string _titel, _genre, _auteur, _uitgever, _taal, _isbn;
-        public int _boekenId, _graad;
+        public string _titel, _auteur, _uitgever, _taal, _isbn;
+        public int _boekenId, _graad, _genreId;
 
         //properties
         public string Titel
@@ -18,10 +18,10 @@ namespace Domain_bibliotheek.Business
             get { return _titel; }
             set { _titel = value; }
         }
-        public string Genre
+        public int GenreId
         {
-            get { return _genre; }
-            set { _genre = value; }
+            get { return _genreId; }
+            set { _genreId = value; }
         }
         public string Auteur
         {
@@ -57,7 +57,7 @@ namespace Domain_bibliotheek.Business
         public Boek()
         {
             _titel = "";
-            _genre = "";
+            _genreId = 0;
             _auteur = "";
             _uitgever = "";
             _taal = "";
@@ -65,10 +65,10 @@ namespace Domain_bibliotheek.Business
             _graad = 0;
             _isbn = "";
         }
-        public Boek(string titel, string genre, string auteur, string uitgever, string taal, int boekenId, int graad, string isbn)
+        public Boek(string titel, int genreId, string auteur, string uitgever, string taal, int boekenId, int graad, string isbn)
         {
             _titel = titel;
-            _genre = genre;
+            _genreId = genreId;
             _auteur = auteur;
             _uitgever = uitgever;
             _taal = taal;

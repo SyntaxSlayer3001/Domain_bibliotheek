@@ -54,7 +54,7 @@ namespace Domain_bibliotheek.Business
         }
         public override string ToString()
         {
-            return $"{_naam}, {_voornaam}";
+            return $"{_gebruikerId}, {_naam}, {_voornaam}";
         }
     }
 }

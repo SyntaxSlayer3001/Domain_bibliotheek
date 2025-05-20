@@ -1,4 +1,4 @@
-﻿namespace Domain_bibliotheek
+﻿namespace winboek
 {
     partial class Form1
     {
@@ -28,19 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lbBoeken = new ListBox();
+            btnAddBoek = new Button();
             SuspendLayout();
+            // 
+            // lbBoeken
+            // 
+            lbBoeken.FormattingEnabled = true;
+            lbBoeken.Location = new Point(12, 12);
+            lbBoeken.Name = "lbBoeken";
+            lbBoeken.Size = new Size(776, 304);
+            lbBoeken.TabIndex = 0;
+            // 
+            // btnAddBoek
+            // 
+            btnAddBoek.Location = new Point(12, 335);
+            btnAddBoek.Name = "btnAddBoek";
+            btnAddBoek.Size = new Size(776, 49);
+            btnAddBoek.TabIndex = 1;
+            btnAddBoek.Text = "Voeg boek toe";
+            btnAddBoek.UseVisualStyleBackColor = true;
+            btnAddBoek.Click += btnAddBoek_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAddBoek);
+            Controls.Add(lbBoeken);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
+            Load += Formulier_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox lbBoeken;
+
+        // Added the missing Formulier_Load method
+        private void Formulier_Load(object sender, EventArgs e)
+        {
+            // Add any initialization logic here
+        }
+        private Button btnAddBoek;
     }
 }
